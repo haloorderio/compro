@@ -1662,3 +1662,45 @@ input, select, textarea {
 		body.is-preload #footer {
 			opacity: 0;
 		}
+
+.skeleton {
+    position: relative;
+}
+.skeleton:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    animation: skeleton-light 1s linear infinite alternate;
+}
+.dark .skeleton:after {
+    animation: skeleton-dark 1s linear infinite alternate;
+}
+@keyframes skeleton-light {
+    0% {
+        background-color: hsl(200, 20%, 80%);
+    }
+    100% {
+        background-color: hsl(200, 20%, 95%);
+    }
+}
+@keyframes skeleton-dark {
+    0% {
+        background-color: hsl(200, 10%, 30%);
+    }
+    100% {
+        background-color: hsl(200, 10%, 45%);
+    }
+}
+.block {
+    display: block;
+}
+.w-full {
+    width: 100%;
+}
+.h-full {
+    height: 100%;
+}
